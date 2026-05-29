@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header id="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>Agro<span>Sustentável</span></h1>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#pilares">Pilares</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <button id="toggle-dark-mode" aria-label="Alternar modo escuro">Ajustar Tema</button>
+        </div>
+    </header>
+
+    <main>
+        
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <h2>Equilíbrio entre Produção e Meio Ambiente</h2>
+                <p>O futuro da alimentação global depende de tecnologias inovadoras que protegem os ecossistemas enquanto impulsionam a produtividade no campo.</p>
+                <button id="btn-saiba-mais" class="btn-primary">Saiba Mais</button>
+            </div>
+        </section>
+
+        <section id="pilares" class="pillars-section">
+            <div class="section-title">
+                <h3>Nossos Pilares Tecnológicos</h3>
+                <p>Como a tecnologia e a natureza caminham juntas para um amanhã melhor.</p>
+            </div>
+
+            <div class="cards-container">
+                <article class="card">
+                    <div class="card-img-placeholder green-bg">🌾</div>
+                    <h4>Agricultura de Precisão</h4>
+                    <p>Uso de drones, sensores e IA para aplicar insumos na quantidade exata, reduzindo o desperdício e protegendo o solo.</p>
+                </article>
+
+                <article class="card">
+                    <div class="card-img-placeholder blue-bg">💧</div>
+                    <h4>Manejo Hídrico Inteligente</h4>
+                    <p>Sistemas de irrigação automatizados que economizam água e utilizam dados climáticos em tempo real.</p>
+                </article>
+
+                <article class="card">
+                    <div class="card-img-placeholder orange-bg">🔄</div>
+                    <h4>Crédito de Carbono e Plantio Direto</h4>
+                    <p>Técnicas que fixam o carbono no solo, combatendo as mudanças climáticas e enriquecendo a terra naturalmente.</p>
+                </article>
+            </div>
+
+            <div id="dynamic-message-area" class="hidden">
+                <p id="dynamic-text"></p>
+            </div>
+        </section>
+
+        <section id="contato" class="contact-section">
+            <div class="contact-container">
+                <h3>Faça Parte Desse Futuro</h3>
+                <p>Inscreva-se na nossa newsletter para receber relatórios e novidades sobre o agronegócio sustentável.</p>
+                
+                <form id="newsletter-form" novalidate>
+                    <div class="form-group">
+                        <input type="text" id="user-name" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="user-email" placeholder="Seu melhor e-mail" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Inscrever-se</button>
+                </form>
+                <div id="form-feedback" class="feedback-msg"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="main-footer">
+        <p>&copy; 2026 Agro Forte, Futuro Sustentável. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

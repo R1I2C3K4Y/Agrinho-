@@ -1,1 +1,365 @@
+/* ==========================================================================
+   Configurações Globais e Variáveis de Cores
+   ========================================================================== */
+:root {
+    --primary-color: #2e7d32;     /* Verde Agro */
+    --secondary-color: #1565c0;   /* Azul Sustentabilidade */
+    --bg-color: #f8f9fa;          /* Fundo Claro */
+    --card-bg: #ffffff;           /* Fundo dos Cards */
+    --text-color: #212121;         /* Texto Escuro */
+    --light-text: #666666;
+    --header-bg: #ffffff;
+    --footer-bg: #212121;
+    --footer-text: #ffffff;
+    --transition-speed: 0.3s;
+}
 
+/* Variáveis para o Modo Escuro */
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --light-text: #aaaaaa;
+    --header-bg: #1e1e1e;
+    --primary-color: #4caf50;
+    --secondary-color: #42a5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   Header & Navegação (Flexbox)
+   ========================================================================== */
+#main-header {
+    background-color: var(--header-bg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color var(--transition-speed);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.logo h1 span {
+    color: var(--primary-color);
+}
+
+#main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color var(--transition-speed);
+}
+
+#main-nav a:hover {
+    color: var(--primary-color);
+}
+
+#toggle-dark-mode {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform var(--transition-speed), background-color var(--transition-speed);
+}
+
+#toggle-dark-mode:hover {
+    transform: scale(1.05);
+    background-color: var(--secondary-color);
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 2rem;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.btn-primary:hover {
+    background-color: #256329;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Seção de Pilares e Cards (Flexbox)
+   ========================================================================== */
+.pillars-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.section-title p {
+    color: var(--light-text);
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 2rem;
+    flex: 1;
+    min-width: 280px; /* Evita que fiquem esmagados */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card-img-placeholder {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.green-bg { background-color: #e8f5e9; }
+.blue-bg { background-color: #e3f2fd; }
+.orange-bg { background-color: #fff3e0; }
+
+.card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: var(--light-text);
+    font-size: 0.95rem;
+}
+
+/* Área da Mensagem Dinâmica do JS */
+#dynamic-message-area {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background-color: var(--card-bg);
+    border-left: 5px solid var(--secondary-color);
+    border-radius: 4px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ==========================================================================
+   Seção de Contato / Formulário
+   ========================================================================== */
+.contact-section {
+    background-color: var(--card-bg);
+    padding: 4rem 2rem;
+    transition: background-color var(--transition-speed);
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-container h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.contact-container p {
+    color: var(--light-text);
+    margin-bottom: 2rem;
+}
+
+#newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color var(--transition-speed);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.btn-submit {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.btn-submit:hover {
+    background-color: #0d47a1;
+}
+
+.feedback-msg {
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+#main-footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   Animações
+   ========================================================================== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   Media Queries (Responsividade)
+   ========================================================================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .cards-container {
+        justify-content: center;
+    }
+    
+    .card {
+        flex: none;
+        width: 100%; /* Ocupa largura total em empilhamento */
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    #main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .hero-section {
+        height: auto;
+        padding: 4rem 1rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.6rem;
+    }
+}
